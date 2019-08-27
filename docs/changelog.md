@@ -31,6 +31,9 @@ permalink: /changelog/
   * Added `CustomTabState.trustedOrigins` extension method to turn the verification state of a custom tab into a list of origins.
   * Added `WebAppHideToolbarFeature.onTrustedScopesChange` to change the trusted scopes after the feature is created.
 
+* **service-firefox-accounts**
+  * ⚠️ **This is a breaking change**: `SyncConfig`'s `syncableStores` has been renamed to `supportedEngines`, expressed via new enum type `SyncEngine`.
+
 # 10.0.1
 
 * [Commits](https://github.com/mozilla-mobile/android-components/compare/v10.0.0...v10.0.1)
