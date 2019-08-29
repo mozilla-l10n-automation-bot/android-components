@@ -31,8 +31,11 @@ permalink: /changelog/
   * Added `CustomTabState.trustedOrigins` extension method to turn the verification state of a custom tab into a list of origins.
   * Added `WebAppHideToolbarFeature.onTrustedScopesChange` to change the trusted scopes after the feature is created.
 
-* **service-firefox-accounts**
-  * ⚠️ **This is a breaking change**: `SyncConfig`'s `syncableStores` has been renamed to `supportedEngines`, expressed via new enum type `SyncEngine`.
+* **concept-sync**, **service-firefox-accounts**
+  * ⚠️ **This is a breaking change**:
+  * `SyncConfig`'s `syncableStores` has been renamed to `supportedEngines`, expressed via new enum type `SyncEngine`.
+  * `begin*` OAuthAccount methods now return an `AuthFlowUrl`, which encapsulates an OAuth state identifier.
+  * `AccountObserver:onAuthenticated` method now has `authType` parameter (instead of `newAccount`), which describes in detail what caused an authentication.
 
 # 10.0.1
 
